@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "NB Password Manager",
+	"description": "A not bad password manager",
+	"version": "0.1",
+	
+	"browser_action": {
+		"default_popup": "nBpwm.html"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["content.js"]
+		}
+	],
+	
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"<all_urls>"
+	],
+	
+	"background": {
+		"scripts": ["background.js"]
+	},
+	
+	"content_security_policy": "script-src 'self' https://sdk.amazonaws.com 'sha256-sLOm6Aqj0wm2fZcbqLZgJ3Kecx/+08/KJeTF1MDq9+U='; object-src 'self' 'unsafe-eval'"
+}

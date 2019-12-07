@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+	<style>
+		#labelfield {
+				outline: none;
+				color: red;
+		}
+		
+		p.preText{ 
+			color:#2E86C1;
+			font: chalkduster;
+			font-weight:bold;
+			text-align:center;
+			font-size: 150%;
+		}
+		span.postText{
+			color:#4C4C4C;
+			font-variant: small-caps;
+			font-weight:lighter;
+			text-align:center;
+			font-size: 100%;
+		}
+		
+		button.submitPage{
+			width: 60%;
+			margin-left: 20%;
+			margin-right: 20%;
+		}
+		
+		div.a{
+			height:70px;
+			background-color: blue;
+			position: fixed;
+			min-height: 200px;
+			margin: auto;
+		}
+		
+	</style>
+
+	<head>
+		<title>NB Password Manager</title>
+		<script src="jquery.min.js"></script>
+		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script>
+		<script src="angular.min.js"></script>
+		<script src="pouchdb-7.1.1.js"></script>
+		<script src="pouchdb.find.js"></script>
+		<script src="aes.js"></script>
+		<script src="nBpwm.js"></script>
+	</head>
+	<body>
+		<p class="preText">NB <span class="postText">Password Manager</span></p>
+		
+		<form>
+			<input type="text" id="username"><br>
+			<input type="text" id="password"><br>
+		</form>
+
+		<div id="labelfield">&nbsp;</div> 
+		<button id="checkPage" class="submitPage">Store Password</button>
+	</body>
+</html>
